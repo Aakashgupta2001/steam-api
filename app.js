@@ -4,10 +4,11 @@ var Steam_id = "1100001164e24b1";
 var API_Stats = `https://api.steampowered.com/ISteamUserStats/GetUserStatsForGame/v0002/?appid=740&key=${API_KEY}&steamid=${Steam_id}`;
 
 var API_stats_data;
-
+/*
 var xhr = new XMLHttpRequest();
 
 xhr.open("GET", API_Stats, true);
+xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
 xhr.send();
 
 xhr.onreadystatechange = function () {
@@ -15,7 +16,7 @@ xhr.onreadystatechange = function () {
     API_stats_data = xhr.responseType;
     console.log(API_stats_data);
   }
-};
+};*/
 
 /* = fetch(API_Stats);
 
