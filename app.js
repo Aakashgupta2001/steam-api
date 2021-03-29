@@ -5,6 +5,19 @@ var API_Stats = `https://api.steampowered.com/ISteamUserStats/GetUserStatsForGam
 
 var API_stats_data;
 
-API_stats_data = fetch(API_Stats);
+var xhr = new XMLHttpRequest();
+
+xhr.open("GET", API_Stats, true);
+xhr.send();
+
+xhr.onreadystatechange = function () {
+  if (this.readyState == 4 && this.status == 200) {
+    API_stats_data = xhr.responseType;
+    console.log(API_stats_data);
+  }
+};
+
+/* = fetch(API_Stats);
 
 console.log(API_stats_data);
+*/
